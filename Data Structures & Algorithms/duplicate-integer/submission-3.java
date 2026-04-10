@@ -1,0 +1,13 @@
+class Solution {
+    public boolean hasDuplicate(int[] nums) {
+        /* 
+        Sorting first an then comparing the 
+        adjacent elements.
+        */
+        Arrays.sort(nums);
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] == nums[i-1]) return true;
+        }
+        return false;
+    }
+}
